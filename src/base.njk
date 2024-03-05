@@ -13,19 +13,20 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Julio Herrera Toledo</title>
+
 
 <!-- STYLES -->
 <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="css/plugins.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
 <!-- /STYLES -->
 
 {% block head %}
+<title>Julio Herrera Toledo</title>
 {% endblock %}
 
 </head>
@@ -38,9 +39,105 @@
 	</div>
 	<!-- /PRELOADER -->
 
-    {% block content %}
-    {% endblock %}
+    <!-- WRAPPER ALL -->
+	<div class="elisc_tm_all_wrap" data-magic-cursor="show"> 
+			
+		<div class="dodo_tm_one_page_wrapper">
+		
+			<!-- MOBILE MENU -->
+			<div class="elisc_tm_topbar">
+				<div class="topbar_inner">
+					<div class="logo" data-type="image"> <!-- You can use text or image as logo. data-type values are: "image" and "text"  -->
+						<a class="image" href="#"><img src="/img/logo/logo.png" alt="" /></a>
+						<a class="text" href="#"><span>Julio.</span></a>
+					</div>
+					<div class="trigger">
+						<div class="hamburger hamburger--slider">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elisc_tm_mobile_menu">
+				<div class="inner">
+					<div class="wrapper">
+						<div class="avatar">
+							<div class="image" data-img-url="/img/about/1.jpg"></div>
+						</div>
+						<div class="menu_list">
+							<ul class="anchor_nav">
+								<li><a href="/index.html">Home</a></li>
+								<li><a href="/index.html#about">About</a></li>
+								<li><a href="/index.html#news">Blog</a></li>
+								<li><a href="/index.html#contact">Contact</a></li>
+							</ul>
+						</div>
+						<div class="social">
+							<ul>
+								<li><a href="#"><img class="svg" src="/img/svg/social/facebook.svg" alt="" /></a></li>
+								<li><a href="#"><img class="svg" src="/img/svg/social/twitter.svg" alt="" /></a></li>
+								<li><a href="#"><img class="svg" src="/img/svg/social/instagram.svg" alt="" /></a></li>
+								<li><a href="#"><img class="svg" src="/img/svg/social/dribbble.svg" alt="" /></a></li>
+								<li><a href="#"><img class="svg" src="/img/svg/social/tik-tok.svg" alt="" /></a></li>
+							</ul>
+						</div>
+						<div class="copyright">
+							<p>Updated &copy; 2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<!-- /MOBILE MENU -->
+
+			<!-- SIDEBAR -->
+			<div class="elisc_tm_sidebar">
+				<div class="sidebar_inner">
+					<div class="author">
+						<div class="image">
+							<img src="/img/thumbs/1-1.jpg" alt="" />
+							<div class="main" data-img-url="img/about/1.jpg"></div>
+						</div>
+						<div class="name">
+							<h3><span>Julio Herrera Toledo<span class="back">Julio Herrera Toledo</span></span></h3>
+						</div>
+					</div>
+					<div class="menu scrollable">
+						<ul class="anchor_nav">
+							<li><a href="/index.html">Home</a></li>
+							<li><a href="/index.html#about">About</a></li>
+							<li><a href="/index.html#news">Blog</a></li>
+							<li><a href="/index.html#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="copyright">
+						<div class="social">
+							<ul>
+								<li><a href="https://twitter.com/jherreratoledo"><i class="icon-twitter-1"></i></a></li>
+								<li><a href="https://www.linkedin.com/in/julio-herrera-toledo-gt/"><i class="icon-linkedin-1"></i></a></li>
+							</ul>
+						</div>
+						<div class="text">
+							<p>Updated © 2024 by Julio Herrera Toledo.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /SIDEBAR -->
+
+            {% block content %}
+            {% endblock %}
+        </div>
+		
+    <!-- CURSOR -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- /CURSOR -->
+
+    </div>
+    <!-- / WRAPPER ALL -->
 
 {% block javascripts %}
 {% endblock %}
@@ -59,10 +156,10 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <!-- SCRIPTS -->
-<script src="js/jquery.js"></script>
+<script src="/js/jquery.js"></script>
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
-<script src="js/plugins.js"></script>
-<script src="js/init.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/init.js"></script>
 <!-- /SCRIPTS -->
 
 </body>

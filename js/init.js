@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
 	elisc_tm_trigger_menu();
 	elisc_tm_service_popup();
 	elisc_tm_experience_popup();
-	elisc_tm_modalbox_news();
+	// elisc_tm_modalbox_news();
 	elisc_tm_modalbox_portfolio();
 	elisc_tm_cursor();
 	elisc_tm_imgtosvg();
@@ -222,34 +222,34 @@ function elisc_tm_service_popup(){
 // -------------  MODALBOX NEWS  -------------------
 // -------------------------------------------------
 
-function elisc_tm_modalbox_news(){
+// function elisc_tm_modalbox_news(){
 	
-	"use strict";
+// 	"use strict";
 	
-	var modalBox		= jQuery('.elisc_tm_modalbox');
-	var button			= jQuery('.elisc_tm_news .list .title a,.elisc_tm_news .elisc_tm_read_more a');
-	var closePopup		= modalBox.find('.close');
+// 	var modalBox		= jQuery('.elisc_tm_modalbox');
+// 	var button			= jQuery('.elisc_tm_news .list .title a,.elisc_tm_news .elisc_tm_read_more a');
+// 	var closePopup		= modalBox.find('.close');
 	
-	button.on('click',function(){
-		var element 	= jQuery(this);
-		var parent 		= element.closest('li');
-		var content 	= parent.find('.news_hidden_details').html();
-		var image		= parent.find('.popup_image').attr('src');
-		var meta		= parent.find('.meta').html();
-		var title		= parent.find('.title h3 a').text();
-		modalBox.addClass('opened');
-		modalBox.find('.description_wrap').html(content);
-		modalBox.find('.news_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
-		modalBox.find('.news_popup_informations .image').after('<div class="details"><div class="meta">'+meta+'</div><div class="title"><h3>'+title+'</h3></div></div>');
-		elisc_tm_data_images();
-		return false;
-	});
-	closePopup.on('click',function(){
-		modalBox.removeClass('opened');
-		modalBox.find('.description_wrap').html('');
-		return false;
-	});
-}
+// 	button.on('click',function(){
+// 		var element 	= jQuery(this);
+// 		var parent 		= element.closest('li');
+// 		var content 	= parent.find('.news_hidden_details').html();
+// 		var image		= parent.find('.popup_image').attr('src');
+// 		var meta		= parent.find('.meta').html();
+// 		var title		= parent.find('.title h3 a').text();
+// 		modalBox.addClass('opened');
+// 		modalBox.find('.description_wrap').html(content);
+// 		modalBox.find('.news_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
+// 		modalBox.find('.news_popup_informations .image').after('<div class="details"><div class="meta">'+meta+'</div><div class="title"><h3>'+title+'</h3></div></div>');
+// 		elisc_tm_data_images();
+// 		return false;
+// 	});
+// 	closePopup.on('click',function(){
+// 		modalBox.removeClass('opened');
+// 		modalBox.find('.description_wrap').html('');
+// 		return false;
+// 	});
+// }
 
 // -------------------------------------------------
 // -------------  MODALBOX PORTFOLIO  --------------
