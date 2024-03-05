@@ -45,6 +45,19 @@
 {% block javascripts %}
 {% endblock %}
 
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 <!-- SCRIPTS -->
 <script src="js/jquery.js"></script>
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
