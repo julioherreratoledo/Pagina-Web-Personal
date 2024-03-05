@@ -21,7 +21,7 @@ collections:
       - { name: "autor", label: "Autor" }
       - { name: "correo", label: "Correo" }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - { name: "content", label: "Content", widget: "markdown" }
       - {
           name: "highlight",
           label: "Highlight",
@@ -29,5 +29,5 @@ collections:
           default: false,
           hint: "Display posts in home's highlights",
         }
-        
+
 show_preview_links: true
