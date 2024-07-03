@@ -23,6 +23,9 @@
 <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- /STYLES -->
 
 {% block head %}
@@ -43,89 +46,35 @@
 	<div class="elisc_tm_all_wrap" data-magic-cursor="show"> 
 			
 		<div class="dodo_tm_one_page_wrapper">
-		
-			<!-- MOBILE MENU -->
-			<div class="elisc_tm_topbar">
-				<div class="topbar_inner">
-					<div class="logo" data-type="image"> <!-- You can use text or image as logo. data-type values are: "image" and "text"  -->
-						<a class="image" href="#"><img src="/img/logo/logo.png" alt="" /></a>
-						<a class="text" href="#"><span>Julio.</span></a>
-					</div>
-					<div class="trigger">
-						<div class="hamburger hamburger--slider">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="elisc_tm_mobile_menu">
-				<div class="inner">
-					<div class="wrapper">
-						<div class="avatar">
-							<div class="image" data-img-url="/img/about/1.jpg"></div>
-						</div>
-						<div class="menu_list">
-							<ul class="anchor_nav">
-								<li><a href="/index.html">Home</a></li>
-								<li><a href="/index.html#about">About</a></li>
-								<li><a href="/index.html#news">Blog</a></li>
-								<li><a href="/index.html#contact">Contact</a></li>
-							</ul>
-						</div>
-						<div class="social">
-							<ul>
-								<li><a href="#"><img class="svg" src="/img/svg/social/facebook.svg" alt="" /></a></li>
-								<li><a href="#"><img class="svg" src="/img/svg/social/twitter.svg" alt="" /></a></li>
-								<li><a href="#"><img class="svg" src="/img/svg/social/instagram.svg" alt="" /></a></li>
-								<li><a href="#"><img class="svg" src="/img/svg/social/dribbble.svg" alt="" /></a></li>
-								<li><a href="#"><img class="svg" src="/img/svg/social/tik-tok.svg" alt="" /></a></li>
-							</ul>
-						</div>
-						<div class="copyright">
-							<p>Updated &copy; 2024</p>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<!-- /MOBILE MENU -->
-
-			<!-- SIDEBAR -->
-			<div class="elisc_tm_sidebar">
-				<div class="sidebar_inner">
-					<div class="author">
-						<div class="image">
-							<img src="/img/thumbs/1-1.jpg" alt="" />
-							<div class="main" data-img-url="img/about/1.jpg"></div>
-						</div>
-						<div class="name">
-							<h3><span>Julio Herrera Toledo<span class="back">Julio Herrera Toledo</span></span></h3>
-						</div>
+			<!-- NAVBAR -->
+			<div class="elisc_tm_navbar">
+				<div class="navbar_inner">
+					<div class="image">
+						<img src="/img/JULIO/LOGO/JULIO_WEB-12.png" alt="Logo" />
 					</div>
-					<div class="menu scrollable">
-						<ul class="anchor_nav">
+					<div class="menu">
+						<ul>
 							<li><a href="/index.html">Home</a></li>
 							<li><a href="/index.html#about">About</a></li>
 							<li><a href="/index.html#news">Blog</a></li>
 							<li><a href="/index.html#contact">Contact</a></li>
 						</ul>
 					</div>
-					<div class="copyright">
-						<div class="social">
-							<ul>
-								<li><a href="https://twitter.com/jherreratoledo"><i class="icon-twitter-1"></i></a></li>
-								<li><a href="https://www.linkedin.com/in/julio-herrera-toledo-gt/"><i class="icon-linkedin-1"></i></a></li>
-							</ul>
-						</div>
-						<div class="text">
-							<p>Updated © 2024 by Julio Herrera Toledo.</p>
-						</div>
+					<div class="social">
+						<ul>
+							<li><a href="https://www.facebook.com/JulioHerreraToledo"><i class="fab fa-facebook-f" style="font-size: 20px;"></i></a></li>
+							<li><a href="https://twitter.com/jherreratoledo"><i class="fa-brands fa-x-twitter" style="font-size: 20px;"></i></li>
+							<li><a href="https://www.instagram.com/jherreratoledo/"><i class="fa-brands fa-instagram" style="font-size: 20px;"></i></li>
+						</ul>
+					</div>
+					<div class="hamburger" id="hamburger">
+						<i class="icon-menu"></i>
 					</div>
 				</div>
 			</div>
-			<!-- /SIDEBAR -->
+			<!-- /NAVBAR -->
+
 
             {% block content %}
             {% endblock %}
@@ -141,6 +90,20 @@
 
 {% block javascripts %}
 {% endblock %}
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const hamburger = document.getElementById('hamburger');
+		const menu = document.querySelector('.elisc_tm_navbar .menu');
+		const social = document.querySelector('.elisc_tm_navbar .social');
+
+		hamburger.addEventListener('click', function () {
+			menu.classList.toggle('show');
+			social.classList.toggle('show');
+		});
+	});
+
+</script>
 
 <script>
     if (window.netlifyIdentity) {

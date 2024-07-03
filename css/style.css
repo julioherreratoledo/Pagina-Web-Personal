@@ -38,6 +38,7 @@ ul{
     --dark-color: #130F49;
     --yellow-color: #FF972D;
     --blue-color: #A5A6FF;
+	--green-color: #01edbb;
     --font-inter: 'Inter', sans-serif;
     --font-karla: 'Karla', sans-serif;
     --font-kristi: 'Kristi', cursive;
@@ -306,7 +307,8 @@ body::-webkit-scrollbar-thumb{
 	min-height: 100vh;
 	clear: both;
 	float: left;
-	padding-left: 370px;
+	padding-top: 150px;
+	/* padding-left: 370px; */
 }
 .elisc_tm_mainpart .mainpart_inner{
 	width: 100%;
@@ -632,6 +634,163 @@ body::-webkit-scrollbar-thumb{
 }
 
 /*---------------------------------------------------*/
+/* 03) ELISC NAVBAR
+/*---------------------------------------------------*/
+
+.elisc_tm_navbar {
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 100;
+    left: 0px;
+    top: 0px;
+    background-color: #fff;
+}
+.elisc_tm_navbar .navbar_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.elisc_tm_navbar .image {
+    width: 50%;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.elisc_tm_navbar .image img {
+    width: 50%;
+}
+.elisc_tm_navbar .menu {
+    width: 30%;
+    float: left;
+}
+.elisc_tm_navbar .social {
+    width: 20%;
+    float: left;
+    display: flex;
+}
+.elisc_tm_navbar .menu ul {
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.elisc_tm_navbar .menu ul li {
+    margin: 0px 15px 0px 0px;
+}
+.elisc_tm_navbar .menu ul li:last-child {
+    margin-bottom: 0px;
+}
+.elisc_tm_navbar .menu ul li a {
+    color: var(--main-color);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.elisc_tm_navbar .menu ul li.active a,
+.elisc_tm_navbar .menu ul li.current a,
+.elisc_tm_navbar .menu ul li a:hover {
+    color: var(--blue-color);
+}
+.elisc_tm_navbar .social ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.elisc_tm_navbar .social ul li {
+    color: var(--blue-color);
+    padding-left: 15px;
+}
+
+.elisc_tm_navbar .social ul li a{
+    color: var(--main-color);
+}
+
+.elisc_tm_navbar .social ul li a:hover{
+    color: var(--blue-color);
+}
+
+/* Hide hamburger menu icon by default */
+.elisc_tm_navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+	.elisc_tm_navbar{
+		height: 90px;
+	}
+
+	.elisc_tm_navbar .image img{
+		width: 70%;
+	}
+
+    .elisc_tm_navbar .menu,
+    .elisc_tm_navbar .social {
+        display: none;
+    }
+
+    .elisc_tm_navbar .hamburger {
+        display: block;
+    }
+
+    .elisc_tm_navbar .menu.show{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        background-color: #fff;
+		height: 210px;
+    }
+
+    .elisc_tm_navbar .social.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        background-color: #fff;
+		height: 210px;
+    }
+
+
+    .elisc_tm_navbar .menu ul {
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+		padding-left: 30px;
+    }
+
+    .elisc_tm_navbar .social ul {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+		padding-right: 30px;
+    }
+
+    .elisc_tm_navbar .menu ul li,
+    .elisc_tm_navbar .social ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/*---------------------------------------------------*/
 /*	04) ELISC HOME
 /*---------------------------------------------------*/
 
@@ -640,7 +799,6 @@ body::-webkit-scrollbar-thumb{
 	min-height: 100vh;
 	clear: both;
 	float: left;
-	background-color: #EFFBF8;
 }
 .elisc_tm_home .details{
 	width: 100%;
@@ -669,6 +827,11 @@ body::-webkit-scrollbar-thumb{
 .blueColor{
 	color: var(--blue-color);
 }
+
+.greenColor{
+	color: var(--green-color);
+}
+
 .yellowColor{
 	color: var(--yellow-color);
 }
@@ -683,10 +846,10 @@ body::-webkit-scrollbar-thumb{
 	float: left;
 }
 .elisc_tm_button a{
-	color: #fff;
-	background-color: #130F49;
+	color: #130F49;
+	background-color: #fff;
 	display: inline-block;
-	border: 1.5px solid #130F49;
+	border: 1.5px solid #fff;
 	border-radius: 4px;
 	padding: 9px 40px 9px 40px;
 	white-space: nowrap;
@@ -882,11 +1045,18 @@ body::-webkit-scrollbar-thumb{
 	width: 100%;
 	float: left;
 	position: relative;
-	text-align: center;
+	text-align: left;
 	padding: 60px 20px;
 	border-radius: 4px;
 	overflow: hidden;
+	display: flex;
 }
+
+.elisc_tm_counter ul li .list_inner img{
+	width: 120px;
+	height: 120px;
+}
+
 .elisc_tm_counter ul li .list_inner:before{
 	position: absolute;
 	top: 0;
@@ -2425,7 +2595,7 @@ body::-webkit-scrollbar-thumb{
 	body{font-size: 16px;line-height: 30px;}
 	.tm_content{max-width: 1000px;}
 	.elisc_tm_sidebar{width: 300px;}
-	.elisc_tm_mainpart{padding-left: 300px;}
+	/* .elisc_tm_mainpart{padding-left: 300px;} */
 	.elisc_tm_sidebar .author{padding-top: 30px;}
 	.elisc_tm_sidebar .author .image{width: 77px;}
 	.elisc_tm_sidebar .name .back{font-size: 18px;}
@@ -2566,4 +2736,10 @@ body::-webkit-scrollbar-thumb{
 	.elisc_tm_modalbox .additional_images ul li{width: 100% !important;padding-left: 0px;margin-bottom: 20px;}
 	.elisc_tm_modalbox .news_popup_informations .title h3{font-size: 19px;}
 	.elisc_tm_modalbox .news_popup_informations .title{margin-bottom: 15px;}
+}
+
+.cuadro_verde{
+	background-color: var(--green-color);
+	padding: 10px 20px;
+	width: fit-content;
 }
