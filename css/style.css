@@ -906,7 +906,7 @@ body::-webkit-scrollbar-thumb{
 	position: absolute;
 	content: "";
 	width: 4px;
-	background-color: var(--yellow-color);
+	background-color: var(--green-color);
 	top: 0px;
 	bottom: 0px;
 }
