@@ -56,7 +56,7 @@ permalink: "index.html"
 								<div class="elisc_tm_biography">
 									<div class="left">
 										<div class="title">
-											<span class="mini">- Nice to meet you!</span>
+											<span class="mini">Nice to meet you!</span>
 											<h3 class="name">Julio Herrera Toledo</h3>
 											<div class="cuadro_verde">
 												<h6>Ejecutive Director</h6>
@@ -72,7 +72,7 @@ permalink: "index.html"
 												</span>
 											</span> -->
 										</div>
-										<div class="elisc_tm_button">
+										<div class="">
 											<a class="anchor" href="#portfolio">Got a project?</a>
 										</div>
 									</div>
@@ -144,7 +144,7 @@ permalink: "index.html"
 												<div class="list_inner">
 													<div class="short">
 														<div class="job">
-															<span class="cuadro_verde">-2011 - Present</span>
+															<span class="cuadro_verde">2011 - Present</span>
 															<h3>Executive Director</h3>
 														</div>
 														<div class="place">
@@ -163,7 +163,7 @@ permalink: "index.html"
 												<div class="list_inner">
 													<div class="short">
 														<div class="job">
-															<span class="cuadro_verde">-2022 - Present</span>
+															<span class="cuadro_verde">2022 - Present</span>
 															<h3>Public Innovation Consultant</h3>
 														</div>
 														<div class="place">
@@ -183,7 +183,7 @@ permalink: "index.html"
 												<div class="list_inner">
 													<div class="short">
 														<div class="job">
-															<span class="cuadro_verde">-2021 - 2022</span>
+															<span class="cuadro_verde">2021 - 2022</span>
 															<h3>DECA Consultant</h3>
 														</div>
 														<div class="place">
@@ -201,7 +201,7 @@ permalink: "index.html"
 												<div class="list_inner">
 													<div class="short">
 														<div class="job">
-															<span class="cuadro_verde">-2020 - 2020</span>
+															<span class="cuadro_verde">2020 - 2020</span>
 															<h3>Open Data Barometer</h3>
 														</div>
 														<div class="place">
@@ -220,7 +220,7 @@ permalink: "index.html"
 												<div class="list_inner">
 													<div class="short">
 														<div class="job">
-															<span class="cuadro_verde">-2016 - 2019</span>
+															<span class="cuadro_verde">2016 - 2019</span>
 															<h3>Open Contracting Consultant</h3>
 														</div>
 														<div class="place">
@@ -252,19 +252,33 @@ permalink: "index.html"
 									<div class="left fn_w_sminibox">
 										<div class="elisc_tm_sticky_section">
 											<div class="elisc_tm_title">
-												<h3>- Blogs and publications</h3>
-												<p>"If you’re into my ramblings and reflections on how we can do better government together, check out my articles</p>
+												<h3>Blogs and publications</h3>
+												<!-- <p>"If you’re into my ramblings and reflections on how we can do better government together, check out my articles</p> -->
 											</div>
-											<div class="elisc_tm_button">
+											<div class="elisc_tm_button2">
 												<a class="anchor" href="#contact">Get in touch</a>
 											</div>
 										</div>
 									</div>
 									<div class="right fn_w_sminibox">
 										<div class="elisc_tm_sticky_section">
-											<div class="list">
+											{% for blog in collections.blogs %}
+											<div class="blogs">
+												<div class="w-30">
+													<img src="{{blog.data.image}}">
+												</div>
+												<div class="w-70">
+													<h6>{{blog.data.date | dateFormat('DD/MM/YYYY')}}</h6>
+													<h5><a href="{{blog.url}}">{{blog.data.title}}</a></h5>
+													<div class="linea"></div>
+													<p style="line-height: 20px;">{{blog.data.title}}</p>
+													<a class="elisc_tm_button2" href="{{blog.url}}">Ver más</a>
+												</div>
+											</div>
+											{% endfor %}
+											<!-- <div class="list">
 												<ul>
-													{% for blog in collections.blogs %}
+													
                                                     <li>
 														<img class="popup_image" src="{{blog.data.image}}" alt="" />
 														<div class="list_inner">
@@ -280,21 +294,18 @@ permalink: "index.html"
 																<a class="line_effect" href="{{blog.url}}">Ver más<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
 															</div>
 
-															<!-- Modalbox Info Start -->
-															<!-- <div class="news_hidden_details">
+															<div class="news_hidden_details">
 																<div class="news_popup_informations">
 																	<div class="text">
 																		<p>{{blog.content | safe}}</p>
 																	</div>
 																</div>
-															</div> -->
-															<!-- /Modalbox Info End -->
-
+															</div>
 														</div>
 													</li>
-													{% endfor %}
+													
 												</ul>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>
@@ -311,13 +322,13 @@ permalink: "index.html"
 								<div class="wrapper">
 									<div class="left">
 										<div class="elisc_tm_title">
-											<span style="color: #fff;">- Let's Connect</span>
-											<h3 style="color: #fff;">Get in touch</h3>
+											<p style="color: #fff;">- Let's Connect</p>
+											<h3 class="cuadro_verde">Get in touch</h3>
 										</div>
 										<div class="text">
-											<p style="color: #fff;">I'm currently avaliable to take on new projects, so feel free to send me a message about anything that you want to run past me. You can contact anytime at 24/7</p>
+											<p style="color: #fff; line-height: 25px;">I'm currently avaliable to take on new projects, so feel free to send me a message about anything that you want to run past me. You can contact anytime at 24/7</p>
 										</div>
-										<div class="info">
+										<div class="info" style="border-left: 1px solid #01edbb; padding-left: 15px;">
 											<ul>
 												<li>
 													<a style="color: #fff;" href="mailto:julio@redciudadana.org">julio@redciudadana.org</a>
