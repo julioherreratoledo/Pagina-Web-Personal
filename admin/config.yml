@@ -21,7 +21,7 @@ collections:
       - { name: "autor", label: "Autor" }
       - { name: "correo", label: "Correo" }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "content", label: "Content", widget: "markdown" }
+      - { name: "body", label: "Body", widget: "markdown" }
       - {
           name: "highlight",
           label: "Highlight",
