@@ -21,12 +21,12 @@ permalink: "index.html"
 								<div class="details">
 									<div class="left">
 										<div class="title">
-											<h3 style="color: #fff;">Hey there! <br>
-												I’m <span class="greenColor">Julio Herrera!</span></h3>
+											<h3 style="color: #fff;">Welcome to my  <br>
+												<span class="greenColor">professional website!</span></h3>
 										</div>
 
 										<div class="subtitle">
-											<p style="color: #fff;">I’m all about making government innovative, transparent and engaging in <span class="greenColor">creative ways.</span></p>
+											<p style="color: #fff;">I’m <span class="greenColor">Julio Herrera Toledo</span>, an advocate of public innovation, digital transformation, and open data. Dive into my work and join me in creating a <span class="greenColor">more transparent and accountable future.</span></p>
 										</div>
 										<div class="buttons">
 											<div class="elisc_tm_button">
@@ -78,8 +78,9 @@ permalink: "index.html"
 									</div>
 									<div class="right">
 										<div class="text">
-											<p>Hey there! I’m <span class="greenColor">Julio Herrera.</span>. I’m all about making government transparent and engaging in creative ways. &amp; developer, and I'm very passionate and dedicated to my work.</p>
-											<p>I lead Red Ciudadana and work with some awesome organizations to make our communities fairer and more open.</p>
+											<p>Hello, I’m <span class="greenColor">Julio Herrera Toledo</span>, an expert in public innovation, digital transformation, and open data.</p>
+											<p>My journey began over a decade ago, driven by a passion to leverage technology for greater government transparency and citizen engagement. </p>
+											<p>With extensive experience in these fields, I’ve led numerous impactful projects that have transformed public services and governance.</p>
 										</div>
 										<div class="info">
 											<ul>
@@ -136,6 +137,7 @@ permalink: "index.html"
 									<div class="elisc_tm_title">
 										<span>- Experience</span>
 										<h3>Everything about me!</h3>
+										<p>From co-founding Red Ciudadana to spearheading digital transformation initiatives, my career has been dedicated to creating innovative and transparent systems. Explore the milestones that have defined my professional path.</p>
 									</div>
 									<div class="list">
 										<ul>
@@ -253,7 +255,7 @@ permalink: "index.html"
 										<div class="elisc_tm_sticky_section">
 											<div class="elisc_tm_title">
 												<h3>Blogs and publications</h3>
-												<!-- <p>"If you’re into my ramblings and reflections on how we can do better government together, check out my articles</p> -->
+												<p>Stay updated with the latest insights on public innovation, digital transformation, and open data.  </p> 
 											</div>
 											<div class="elisc_tm_button2">
 												<a class="anchor" href="#contact">Get in touch</a>
@@ -314,6 +316,75 @@ permalink: "index.html"
 					</div>
 					<!-- /NEWS -->
 
+					<!-- RESEARCH / REPORTS -->
+					<div class="elisc_tm_section" id="news">
+						<div class="elisc_tm_news fn_w_sminiboxes">
+							<div class="tm_content">
+								<div class="wrapper">
+									<div class="left fn_w_sminibox">
+										<div class="elisc_tm_sticky_section">
+											<div class="elisc_tm_title">
+												<h3>Research and Reports</h3>
+												<p>Explore my collection of research papers, reports, and articles. Each publication reflects my dedication to advancing public innovation, digital transformation, and open data.</p> 
+											</div>
+											<div class="elisc_tm_button2">
+												<a class="anchor" href="#contact">Get in touch</a>
+											</div>
+										</div>
+									</div>
+									<div class="right fn_w_sminibox">
+										<div class="elisc_tm_sticky_section">
+											{% for publicacion in collections.publicaciones %}
+											<div class="blogs">
+												<div class="w-30">
+													<img src="{{publicacion.data.image}}">
+												</div>
+												<div class="w-70">
+													<h5><a target="_blank" href="{{publicacion.data.link}}">{{publicacion.data.title}}</a></h5>
+													<div class="linea"></div>
+													<p style="line-height: 20px;">{{publicacion.data.title}}</p>
+													<a class="elisc_tm_button2" target="_blank" href="{{publicacion.data.link}}">Ver más</a>
+												</div>
+											</div>
+											{% endfor %}
+											<!-- <div class="list">
+												<ul>
+													
+                                                    <li>
+														<img class="popup_image" src="{{blog.data.image}}" alt="" />
+														<div class="list_inner">
+															<div class="info">
+																<div class="meta">
+																	<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>{{blog.data.date | dateFormat('DD/MM/YYYY')}}</span>
+																</div>
+																<div class="title">
+																	<h3><a href="{{blog.url}}">{{blog.data.title}}</a></h3>
+																</div>
+															</div>
+															<div class="elisc_tm_read_more">
+																<a class="line_effect" href="{{blog.url}}">Ver más<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+															</div>
+
+															<div class="news_hidden_details">
+																<div class="news_popup_informations">
+																	<div class="text">
+																		<p>{{blog.content | safe}}</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+												</ul>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /RESEARCH -->
+
 
 					<!-- CONTACT -->
 					<div class="elisc_tm_section" id="contact">
@@ -326,7 +397,7 @@ permalink: "index.html"
 											<h3 class="cuadro_verde">Get in touch</h3>
 										</div>
 										<div class="text">
-											<p style="color: #fff; line-height: 25px;">I'm currently avaliable to take on new projects, so feel free to send me a message about anything that you want to run past me. You can contact anytime at 24/7</p>
+											<p style="color: #fff; line-height: 25px;">I’d love to hear from you! Whether you have a question, want to collaborate, or are interested in my work, feel free to reach out.</p>
 										</div>
 										<div class="info" style="border-left: 1px solid #01edbb; padding-left: 15px;">
 											<ul>
@@ -371,7 +442,7 @@ permalink: "index.html"
 								<div class="elisc_tm_map">
 									<div class="mapouter"><div class="gmap_canvas">
 
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.595722555848!2d-90.51692002563176!3d14.622091285866784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a23089d0dfe7%3A0x769eaa7d946b5632!2sCampus%20Tec!5e0!3m2!1ses!2sgt!4v1682120604617!5m2!1ses!2sgt" width="100%" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15444.793209408372!2d-90.5042214!3d14.5877734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3be2a21adaf%3A0xfae6ebca6355f6d!2sEdificio%20Torino!5e0!3m2!1ses-419!2sgt!4v1722521207647!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 										<a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon"></a><br><style>.mapouter{position:relative;text-align:right;height:375px;width:100%;}</style><a href="https://www.embedgooglemap.net">how to add google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:375px;width:100%;}</style></div></div>
 
